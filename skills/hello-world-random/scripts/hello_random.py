@@ -9,4 +9,5 @@ GREETINGS = [
     "Hallo, Welt!",           # German
 ]
 
-print(random.choice(GREETINGS))
+for greeting in random.sample(GREETINGS, k=len(GREETINGS)):
+    print(greeting)

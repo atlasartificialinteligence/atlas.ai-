@@ -1,11 +1,11 @@
 ---
 name: hello-world-random
-description: Return “Hello, World!” in one random language out of five options. Use when the user asks for a quick multilingual hello-world greeting, a random greeting demo, or a simple random-output example.
+description: Return “Hello, World!” in five languages in random order. Use when the user asks for a multilingual hello-world demo with randomized sequence.
 ---
 
 # Hello World Random
 
-Return one greeting randomly selected from five languages.
+Return five greetings (one per language) in random order.
 
 ## Quick use
 
@@ -15,7 +15,7 @@ Run:
 python3 scripts/hello_random.py
 ```
 
-The script prints exactly one line.
+The script prints five lines (all languages), shuffled randomly.
 
 ## Languages included
 
