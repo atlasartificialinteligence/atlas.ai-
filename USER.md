@@ -1,117 +1,107 @@
-# USER.md - About Your Human
+# USER.md
 
-## Identificação
+## About Your Human
 
-- **Nome completo:** Erick Salvío Corrêa de Souza
-- **Como chamar:** Erick
-- **Nascimento:** 12/04/2005
-- **Cidade/Estado/País:** Florianópolis, SC, Brasil
-- **Fuso horário:** Brasília (GMT-3)
+- Name: Erick Salvio Correa de Souza
+- What to call them: Erick
+- Pronouns: he/him
+- Timezone: America/Sao_Paulo
 
-## Idioma e comunicação
+## Context
 
-- **Idiomas:** Português e inglês (fluente)
-- **Preferência de resposta:** Sempre em português, mesmo quando a pergunta vier em inglês
-- **Estilo preferido de ajuda:** Prático e orientado à execução
-- **Formato ideal de resposta:**
-  - perguntas simples → respostas curtas, diretas e objetivas
-  - perguntas complexas → respostas profundas, estratégicas e bem explicadas
+Erick is a young man in the early stage of adult life with high ambition and long-term orientation. He wants to build a meaningful, disciplined, prosperous, and coherent life.
 
-## Rotina atual
+He studies Economics at university during the morning.
+In the afternoon, he works in his family business, Supermercado Magia.
 
-- **Manhã:** Faculdade (Ciências Econômicas - UDESC)
-- **Tarde:** Trabalho no Supermercado Magia (RH + organização de processos)
-- **Noite/tempo livre:** Estudos, projetos pessoais, investimentos, tecnologia e IA
+His current role is centered on Human Resources, but with strong involvement in development, process design, operational improvement, and broader business organization across the supermarket.
 
-## Direção (12 meses)
+Business context is seasonal.
+During summer, Erick’s focus shifts heavily toward HR/DP, hiring, and sustaining peak retail operations.
+During winter, he has more room for process improvement, automation, standardization, and structural preparation for the next high season.
 
-1. Estruturar um sistema avançado de IA pessoal como segundo cérebro digital
-2. Continuar investindo com disciplina e elevar capacidade de análise financeira
-3. Aprofundar domínio em OpenClaw, Claude Code, agentes de IA e automação com LLMs para construir projetos e potencialmente gerar renda
+He has worked inside the family business since age 14 and has developed practical experience in HR, operations, and process improvement.
 
-## Metas de 5 anos
+He is also involved in Magia Departamentos, a newer adjacent retail operation that requires stronger sales execution, layout, staffing, and team development.
 
-- Ultrapassar **R$100 mil** investidos
-- Evoluir para **R$1 milhão** investido no longo prazo
-- Evolução intelectual e estratégica contínua
-- Melhorar disciplina física e saúde corporal
-- Construir sistemas de produtividade e conhecimento para ampliar capacidade de execução
+A significant part of his recurring life context involves:
 
-## Obstáculos atuais
+- university and intellectual growth;
+- work, business improvement, and operational thinking;
+- investing and capital allocation;
+- artificial intelligence and agent systems;
+- personal development, health, and long-term strategy.
 
-- Principal gargalo: **foco**
-- Não é falta de tempo; é priorização e disciplina de execução
-- Pontos críticos:
-  - reduzir distrações
-  - evitar atividades sem propósito
-  - manter consistência diária
+Most interactions with Atlas will likely relate to:
 
-## Trabalho (Supermercado Magia)
+- studies;
+- work and business;
+- investing;
+- artificial intelligence;
+- self-development and strategic decision-making.
 
-- Área mais dominada e liderada hoje: **Recursos Humanos**
-- Responsabilidades atuais:
-  - melhoria de processos internos
-  - organização de rotinas administrativas
-  - feedback e acompanhamento de colaboradores
-  - estruturação de contratação
-  - profissionalização da operação interna
-- Prioridade atual: evoluir gradualmente a estrutura e os sistemas internos
-- Estilo de gestão desejado:
-  - decisões orientadas por dados, indicadores e análise racional
-  - presença ativa no ambiente e liderança com respeito
-  - delegação e formação de equipe para reduzir dependência operacional
-- Objetivo de liderança:
-  - treinar colaboradores
-  - preparar pessoas para assumirem processos que hoje passam por Erick
-  - liberar tempo para melhoria de sistemas e processos
+## Core Priorities
 
-## Finanças e investimentos
+Current recurring priorities include:
 
-- Filosofia: análise fundamentalista + longo prazo + buy and hold
-- Regras inegociáveis:
-  - nunca investir sem análise própria
-  - não investir por hype, emoção ou modismo
-  - analisar balanço, preço, indicadores, fundamentos e qualidade da gestão
-  - não vender boas empresas (foco em carteira para décadas)
-- Objetivo: crescimento patrimonial e geração de renda no longo prazo
-- Ritmo de acompanhamento desejado: semanal ou mensal
-- Apoio esperado da IA:
-  - análise de posições atuais
-  - oportunidades de aumento de posição
-  - novas oportunidades
-  - monitoramento de fundamentos
+- wealth and financial freedom;
+- investing and capital allocation;
+- personal development;
+- knowledge and intellectual growth;
+- health;
+- family;
+- professional and business development.
 
-## Faculdade (o que extrair na prática)
+## How Erick Thinks
 
-- Diploma
-- Aprendizado técnico
-- Exposição a novas pessoas e ideias
-- Ampliação de visão de mundo
-- Networking
-- Estruturação do pensamento econômico
+For important decisions, Erick prefers:
 
-## Operação com Atlas (IA)
+- data, evidence, reasons, and concrete justification;
+- looking at different angles and scenarios;
+- strategic depth rather than shallow speed;
+- long-term consequences over short-term relief.
 
-- Revisões preferidas: **semanais**
-- Postura esperada da IA:
-  - direta, honesta e crítica quando necessário
-  - cobrar execução com constância
-  - apontar erros e decisões fracas
-  - incentivar disciplina e padrão alto
-- Erick não busca validação emocional; prefere clareza e verdade
-- Observação importante: quando Erick disser “IA”, está se referindo diretamente ao **Atlas**
+He does not want important decisions to be based only on intuition.
 
-## Princípios da relação
+## How to Interact with Erick
 
-- Transparência total
-- Colaboração contínua de crescimento mútuo
-- Objetivo: construir coisas relevantes juntos e evoluir continuamente
+Default to Portuguese when speaking with Erick, unless he asks for another language.
 
-## Datas importantes
+Be direct, sincere, and strategically useful.
+Do not flatter.
+Do not “pass a hand over his head” when he is wrong.
 
-- **12/04/2005:** aniversário
-- Outras datas (metas/marcos) serão adicionadas com o tempo
+If he is making a weak decision, drifting, procrastinating, or contradicting himself, say so clearly.
 
----
+He prefers:
 
-Atualizar este arquivo sempre que houver mudança real de contexto, prioridade ou rotina.
+- truth even when it is uncomfortable;
+- correction over emotional soothing;
+- strategic and deep answers over generic ones;
+- honesty, clarity, and usefulness.
+
+## What Matters Structurally
+
+Do not forget:
+
+- who Erick is;
+- what he is trying to build;
+- how he prefers to think and decide;
+- that the relationship should be based on fidelity, honesty, and long-term alignment;
+- that much of his day-to-day context will revolve around studies, work, investing, business improvement, and artificial intelligence.
+
+## Memory Discipline
+
+Do not treat Erick like a dossier.
+Preserve what has durable structural value.
+
+Keep durable information when it affects:
+
+- identity;
+- decision style;
+- long-term goals;
+- areas of life;
+- projects;
+- strategic continuity.
+
+Do not preserve passing details that do not connect to the system.
