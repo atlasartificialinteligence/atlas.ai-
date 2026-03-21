@@ -1,49 +1,49 @@
-# Carteira de Investimentos — Portfolio Live (Atlas)
+# Investment Portfolio — Live (Atlas)
 
-_Última atualização: 2026-03-21 20:45 UTC_
-_Status: validado_
+_Last updated: 2026-03-21 20:45 UTC_
+_Status: validated_
 
-## Snapshot da Carteira (posição atual)
+## Portfolio Snapshot (current position)
 
-| Ativo | Quantidade | Preço atual (R$) | PM (R$) | Valor de mercado (R$) | P/L não realizado (R$) | P/L não realizado (%) | Peso na carteira (%) |
+| Stock | Quantity | Current Price (R$) | Avg Cost (R$) | Market Value (R$) | Unrealized P/L (R$) | Unrealized P/L (%) | Portfolio Weight (%) |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| BBAS3 | 1.250 | 23,27 | 19,192952 | 29.087,50 | 5.096,31 | 21,24% | 79,11% |
-| BBSE3 | 53 | 34,09 | 19,03 | 1.806,77 | 798,18 | 79,14% | 4,91% |
-| EGIE3 | 35 | 31,31 | 26,396571 | 1.095,85 | 171,97 | 18,61% | 2,98% |
-| PETR4 | 69 | 45,67 | 32,838986 | 3.151,23 | 885,34 | 39,07% | 8,57% |
-| SAPR4 | 200 | 8,14 | 4,05 | 1.628,00 | 818,00 | 100,99% | 4,43% |
+| BBAS3 | 1,250 | 23.27 | 19.192952 | 29,087.50 | 5,096.31 | 21.24% | 79.11% |
+| BBSE3 | 53 | 34.09 | 19.03 | 1,806.77 | 798.18 | 79.14% | 4.91% |
+| EGIE3 | 35 | 31.31 | 26.396571 | 1,095.85 | 171.97 | 18.61% | 2.98% |
+| PETR4 | 69 | 45.67 | 32.838986 | 3,151.23 | 885.34 | 39.07% | 8.57% |
+| SAPR4 | 200 | 8.14 | 4.05 | 1,628.00 | 818.00 | 100.99% | 4.43% |
 
-## Totais da carteira
+## Portfolio Totals
 
-- Valor total em ações (R$): **36.769,35**
-- Custo total (R$): **28.999,55**
-- Resultado não realizado total (R$): **7.769,80**
-- Resultado não realizado total (%): **26,79%**
+- Total equity value (R$): **36,769.35**
+- Total cost basis (R$): **28,999.55**
+- Total unrealized result (R$): **7,769.80**
+- Total unrealized result (%): **26.79%**
 
-## Automação de atualização (ativa)
+## Update Automation (active)
 
-Este arquivo está integrado ao webhook de eventos de investimentos do Atlas.
+This file is integrated with Atlas investment-event webhooks.
 
-Quando o Atlas receber um `ATLAS_EVENT` válido:
+When Atlas receives a valid `ATLAS_EVENT`:
 
-- `event=compra` ou `event=venda` → atualizar automaticamente este arquivo (`portfolio live`), recalculando posição, PM, valor e totais.
-- `event=provento` → não altera posição/PM, mas registra evento para reconciliação com o arquivo de proventos.
+- `event=compra` or `event=venda` → automatically update this file (`portfolio live`), recalculating position, average cost, value, and totals.
+- `event=provento` → does not change position/average cost, but records the event for reconciliation with the dividends file.
 
-### Formato operacional do evento (referência)
+### Event operational format (reference)
 
-`ATLAS_EVENT tipo=<provento|compra|venda> ativo=<TICKER> valor=<VALOR> data=<DD/MM/AAAA> fonte=ios_shortcut`
+`ATLAS_EVENT tipo=<provento|compra|venda> ativo=<TICKER> valor=<VALUE> data=<DD/MM/YYYY> fonte=ios_shortcut`
 
-### Política operacional
+### Operational policy
 
-- Atualização automática é a regra padrão para eventos recebidos por webhook.
-- Em caso de inconsistência de campo (ticker inválido, valor ausente, data inválida), o evento deve ser sinalizado para revisão manual.
-- Toda atualização automática deve gerar registro no `Log de alterações`.
+- Automatic updates are the default rule for webhook events.
+- If any field is inconsistent (invalid ticker, missing value, invalid date), the event must be flagged for manual review.
+- Every automatic update must generate a record in `Change Log`.
 
-## Origem dos dados
+## Data sources
 
-> **Inativo por enquanto** — esta seção será ativada quando definirmos a estrutura oficial de arquivos e fontes.
+> **Inactive for now** — this section will be activated once we define the official file/source structure.
 
-## Log de alterações
+## Change Log
 
-- 2026-03-21 18:12 UTC — preenchimento inicial com posição consolidada, PM e P/L por ativo.
-- 2026-03-21 20:45 UTC — adicionada diretriz formal de automação via webhook (`ATLAS_EVENT`) para atualização automática do portfolio live.
+- 2026-03-21 18:12 UTC — initial fill with consolidated position, average cost, and per-stock P/L.
+- 2026-03-21 20:45 UTC — added formal webhook automation guideline (`ATLAS_EVENT`) for automatic portfolio-live updates.
