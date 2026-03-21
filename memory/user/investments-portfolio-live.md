@@ -1,6 +1,6 @@
 # Carteira de Investimentos — Portfolio Live (Atlas)
 
-_Última atualização: 2026-03-21 18:12 UTC_
+_Última atualização: 2026-03-21 20:45 UTC_
 _Status: validado_
 
 ## Snapshot da Carteira (posição atual)
@@ -20,6 +20,25 @@ _Status: validado_
 - Resultado não realizado total (R$): **7.769,80**
 - Resultado não realizado total (%): **26,79%**
 
+## Automação de atualização (ativa)
+
+Este arquivo está integrado ao webhook de eventos de investimentos do Atlas.
+
+Quando o Atlas receber um `ATLAS_EVENT` válido:
+
+- `event=compra` ou `event=venda` → atualizar automaticamente este arquivo (`portfolio live`), recalculando posição, PM, valor e totais.
+- `event=provento` → não altera posição/PM, mas registra evento para reconciliação com o arquivo de proventos.
+
+### Formato operacional do evento (referência)
+
+`ATLAS_EVENT tipo=<provento|compra|venda> ativo=<TICKER> valor=<VALOR> data=<DD/MM/AAAA> fonte=ios_shortcut`
+
+### Política operacional
+
+- Atualização automática é a regra padrão para eventos recebidos por webhook.
+- Em caso de inconsistência de campo (ticker inválido, valor ausente, data inválida), o evento deve ser sinalizado para revisão manual.
+- Toda atualização automática deve gerar registro no `Log de alterações`.
+
 ## Origem dos dados
 
 > **Inativo por enquanto** — esta seção será ativada quando definirmos a estrutura oficial de arquivos e fontes.
@@ -27,3 +46,4 @@ _Status: validado_
 ## Log de alterações
 
 - 2026-03-21 18:12 UTC — preenchimento inicial com posição consolidada, PM e P/L por ativo.
+- 2026-03-21 20:45 UTC — adicionada diretriz formal de automação via webhook (`ATLAS_EVENT`) para atualização automática do portfolio live.
