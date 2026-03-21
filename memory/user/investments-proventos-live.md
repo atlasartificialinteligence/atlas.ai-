@@ -1,6 +1,6 @@
 # Proventos por Ação — Live (Atlas)
 
-_Última atualização: 2026-03-21 20:57 UTC_
+_Última atualização: 2026-03-21 21:02 UTC_
 _Status: validado_
 
 ## Proventos acumulados por ação (R$)
@@ -8,7 +8,7 @@ _Status: validado_
 | Ativo | Proventos acumulados (R$) |
 |---|---:|
 | BBAS3 | 3.228,21 |
-| PETR4 | 2.130,57 |
+| PETR4 | 2.162,05 |
 | BBSE3 | 791,47 |
 | EGIE3 | 256,70 |
 | SAPR4 | 179,03 |
@@ -17,7 +17,7 @@ _Status: validado_
 
 ## Total geral
 
-- **R$ 6.789,18**
+- **R$ 6.820,66**
 
 ## Automação de atualização (ativa)
 
@@ -50,3 +50,4 @@ Quando o Atlas receber um `ATLAS_EVENT` válido com `event=provento`:
 - 2026-03-21 20:45 UTC — adicionada diretriz formal de automação via webhook (`ATLAS_EVENT`) para atualização automática de proventos.
 - 2026-03-21 20:54 UTC — evento `provento` aplicado: PETR4 + R$ 40,03 (fonte: ios_shortcut; data informada: 21/03/2026).
 - 2026-03-21 20:57 UTC — reversão manual de teste fictício: PETR4 - R$ 40,03; valores restaurados ao estado original.
+- 2026-03-21 21:02 UTC — evento `provento` aplicado: PETR4 + R$ 31,48 (fonte: ios_shortcut; data informada: 20/03/2026).
