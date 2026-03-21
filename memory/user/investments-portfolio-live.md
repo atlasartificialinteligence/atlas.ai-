@@ -7,18 +7,18 @@ _Status: validated_
 
 | Stock | Quantity | Current Price (R$) | Avg Cost (R$) | Market Value (R$) | Unrealized P/L (R$) | Unrealized P/L (%) | Portfolio Weight (%) |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| BBAS3 | 1,250 | 23.27 | 19.192952 | 29,087.50 | 5,096.31 | 21.24% | 79.11% |
-| BBSE3 | 53 | 34.09 | 19.03 | 1,806.77 | 798.18 | 79.14% | 4.91% |
-| EGIE3 | 35 | 31.31 | 26.396571 | 1,095.85 | 171.97 | 18.61% | 2.98% |
-| PETR4 | 69 | 45.67 | 32.838986 | 3,151.23 | 885.34 | 39.07% | 8.57% |
-| SAPR4 | 200 | 8.14 | 4.05 | 1,628.00 | 818.00 | 100.99% | 4.43% |
+| BBAS3 | 1,250 | 23.27 | 19.192952 | 29,087.50 | 5,096.31 | 21.24% | 77.39% |
+| BBSE3 | 53 | 34.09 | 19.03 | 1,806.77 | 798.18 | 79.14% | 4.81% |
+| EGIE3 | 35 | 31.31 | 26.396571 | 1,095.85 | 171.97 | 18.61% | 2.92% |
+| PETR4 | 69 | 45.67 | 32.838986 | 3,151.23 | 885.34 | 39.07% | 8.38% |
+| SAPR4 | 300 | 8.14 | 5.413333 | 2,442.00 | 818.00 | 50.37% | 6.50% |
 
 ## Portfolio Totals
 
-- Total equity value (R$): **36,769.35**
-- Total cost basis (R$): **28,999.55**
+- Total equity value (R$): **37,583.35**
+- Total cost basis (R$): **29,813.55**
 - Total unrealized result (R$): **7,769.80**
-- Total unrealized result (%): **26.79%**
+- Total unrealized result (%): **26.06%**
 
 ## Update Automation (active)
 
@@ -49,3 +49,4 @@ When Atlas receives a valid `ATLAS_EVENT`:
 - 2026-03-21 20:45 UTC — added formal webhook automation guideline (`ATLAS_EVENT`) for automatic portfolio-live updates.
 - 2026-03-21 21:34 UTC — event `compra` applied: PETR4 +10 @ R$ 23.51 (source: ios_shortcut; informed date: 21/03/2026). Recalculated quantity, average cost, totals, and weights.
 - 2026-03-21 21:38 UTC — manual rollback of fictitious buy test: PETR4 -10 @ R$ 23.51; restored prior quantities, average cost, totals, and weights.
+- 2026-03-21 21:38 UTC — event `compra` applied: SAPR4 +100 @ R$ 8.14 (source: ios_shortcut; informed date: 21/03/2026). Recalculated quantity, average cost, totals, and weights.
