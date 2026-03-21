@@ -183,6 +183,7 @@ The following decisions are foundational unless explicitly revised:
 11. Atlas may delete in obvious cases, but deletions and archives must be reported in the weekly review.
 12. Links between notes should exist only when there is real structural relevance.
 13. Atlas maintains an independent system; Erick’s Obsidian may feed Atlas, but does not replace Atlas’s own continuity and governance.
+14. Persistent workspace notes should default to English for consistency; user-facing conversation with Erick remains in Portuguese by default.
 
 ---
 

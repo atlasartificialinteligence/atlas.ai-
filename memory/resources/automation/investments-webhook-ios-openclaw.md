@@ -1,107 +1,107 @@
-# Automação de Investimentos (iOS + XP + OpenClaw)
+# Investments Automation (iOS + XP + OpenClaw)
 
-_Data: 2026-03-21_
-_Status: concluído e operacional_
+_Date: 2026-03-21_
+_Status: completed and operational_
 
-## Objetivo
+## Objective
 
-Construir um fluxo prático e confiável para atualizar automaticamente os arquivos live de investimentos do Atlas, reduzindo fricção operacional e dependência de registro manual em conversa.
+Build a practical and reliable flow to automatically update Atlas live investment files, reducing friction and dependency on manual chat-based logging.
 
-Objetivo específico:
+Specific objective:
 
-1. receber eventos de investimentos no iPhone;
-2. enviar esses eventos ao OpenClaw com segurança;
-3. atualizar automaticamente os arquivos de referência da carteira:
+1. capture investment events on iPhone;
+2. send those events to OpenClaw securely;
+3. automatically update the portfolio reference files:
    - `memory/user/investments-portfolio-live.md`
    - `memory/user/investments-proventos-live.md`
 
-## Contexto e restrições
+## Context and constraints
 
-- Corretora: XP.
-- Plataforma móvel: iOS.
-- Limitação crítica: iOS não permite captura totalmente automática de notificações de apps de terceiros (como XP) em background de forma livre.
-- Conclusão prática: o melhor modelo viável é **atalho com entrada rápida + envio automático por webhook**.
+- Broker: XP.
+- Mobile platform: iOS.
+- Critical limitation: iOS does not allow fully automatic background capture of third-party app notifications (such as XP) in an unrestricted way.
+- Practical conclusion: the best viable model is **shortcut-based quick input + automatic webhook submission**.
 
-## O que foi implementado
+## What was implemented
 
-## 1) Padronização dos arquivos live
+## 1) Live-file standardization
 
-Foram consolidados dois arquivos principais para operação contínua:
+Two core files were consolidated for continuous operation:
 
 - `memory/user/investments-portfolio-live.md`
 - `memory/user/investments-proventos-live.md`
 
-Outros arquivos transitórios anteriores de investimentos foram removidos para manter uma base limpa e única.
+Older transitional investment files were removed to keep a clean single source of truth.
 
-## 2) Webhook de ingestão no OpenClaw
+## 2) OpenClaw webhook ingestion
 
-Configuração aplicada no OpenClaw:
+Applied OpenClaw configuration:
 
-- hooks habilitados;
-- token dedicado de autenticação;
-- restrições de segurança (agent permitido, session policy, limite de body);
-- mapeamento de endpoint:
+- hooks enabled;
+- dedicated auth token;
+- security restrictions (allowed agent, session policy, payload size limit);
+- mapped endpoint:
   - `POST /hooks/investments`
 
-Esse endpoint recebe payload JSON simples (event/ativo/valor/data/fonte) e aciona processamento interno.
+This endpoint receives a simple JSON payload (`event/ativo/valor/data/fonte`) and triggers internal processing.
 
-## 3) Conectividade iPhone → OpenClaw via Tailnet
+## 3) iPhone → OpenClaw connectivity through Tailnet
 
-Como o gateway estava em loopback, foi ajustado para bind em tailnet e validado acesso no IP tailnet:
+Since the gateway was loopback-only, it was changed to tailnet bind and validated on tailnet IP:
 
 - `http://100.106.52.10:18789/hooks/investments`
 
-No atalho iOS, envio com:
+In the iOS Shortcut, submission uses:
 
 - `Authorization: Bearer <token>`
 - `Content-Type: application/json`
-- body JSON com os campos do evento.
+- JSON body with event fields.
 
-## 4) Fluxo validado em produção (com teste controlado)
+## 4) Production validation (controlled test)
 
-- Erro inicial identificado: uso indevido de `/hooks/agent` sem campo `message` (`message required`).
-- Correção aplicada: troca para `/hooks/investments` com body compatível.
-- Evento de provento foi recebido e aplicado automaticamente.
-- Reversão manual do valor de teste fictício foi realizada e logada corretamente.
+- Initial error identified: wrong usage of `/hooks/agent` without `message` (`message required`).
+- Fix applied: switch to `/hooks/investments` with compatible body.
+- Dividend event was received and applied automatically.
+- Manual rollback of a fictitious test value was performed and logged correctly.
 
-## Aprendizados principais
+## Key learnings
 
-1. **Automação total passiva não é realista no iOS para esse caso** (notificação XP), mas automação de baixo atrito é plenamente viável.
-2. **Endpoint correto + payload correto** são o núcleo da confiabilidade.
-3. **Padronizar dois arquivos live** reduz complexidade e evita drift de memória.
-4. **Registrar log de alterações** é essencial para auditabilidade.
-5. Em automações financeiras, é obrigatório ter caminho de reversão para testes fictícios.
+1. **Fully passive automation is not realistic on iOS for this case** (XP notifications), but low-friction automation is fully viable.
+2. **Correct endpoint + correct payload** is the reliability core.
+3. **Standardizing on two live files** reduces complexity and prevents memory drift.
+4. **Change logs are mandatory** for auditability.
+5. Financial automations must include a clear rollback path for test entries.
 
-## Resultado final
+## Final result
 
-Estado final alcançado:
+Final state achieved:
 
-- fluxo iOS Shortcut → webhook OpenClaw funcional;
-- atualização automática dos arquivos live habilitada;
-- base de investimentos simplificada e operacional;
-- processo auditável com logs em arquivo.
+- functional iOS Shortcut → OpenClaw webhook flow;
+- automatic updates for live investment files enabled;
+- simplified and operational investment memory base;
+- auditable process with in-file logs.
 
-## Padrão reutilizável para futuras automações
+## Reusable pattern for future automations
 
-Arquitetura replicável:
+Replicable architecture:
 
-1. captura leve no cliente (atalho/form);
-2. webhook seguro com token;
-3. parser/evento padronizado;
-4. aplicação determinística em memória operacional;
-5. log de alteração + mecanismo de reversão.
+1. lightweight client capture (shortcut/form);
+2. secure webhook with token;
+3. standardized event parser;
+4. deterministic application into operational memory;
+5. change log + rollback mechanism.
 
-Esse padrão pode ser reutilizado para:
+This pattern can be reused for:
 
-- despesas pessoais;
-- fluxo de tarefas recorrentes;
-- eventos de RH/operação no negócio;
-- monitoramento periódico com reconciliação.
+- personal expense capture;
+- recurring task flows;
+- HR/operations event capture for business routines;
+- periodic monitoring with reconciliation.
 
-## Próximas ideias
+## Next ideas
 
-1. criar atalhos separados para `provento`, `compra`, `venda` com payload já fechado;
-2. adicionar idempotência por `event_id` para evitar duplicidade;
-3. criar rotina de reconciliação semanal (check de consistência);
-4. incluir resposta estruturada do webhook para confirmação explícita de sucesso/erro no iPhone;
-5. evoluir para transformação determinística (script dedicado) quando o volume de eventos crescer.
+1. create separate shortcuts for `provento`, `compra`, `venda` with prefilled payloads;
+2. add idempotency via `event_id` to prevent duplicates;
+3. add a weekly reconciliation routine (consistency check);
+4. include structured webhook response for explicit success/error feedback on iPhone;
+5. evolve to deterministic script-based transformation when event volume grows.

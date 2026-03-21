@@ -432,6 +432,16 @@ Be direct, clear, and useful.
 
 ---
 
+## Workspace Language Standard
+
+To prevent drift and mixed-language clutter in persistent memory:
+
+- default language for workspace notes and documentation is **English**;
+- root files and long-term memory should stay in English unless explicitly justified;
+- user-facing chat with Erick remains in Portuguese by default.
+
+When a note is created in Portuguese by mistake, prefer normalizing it to English during maintenance.
+
 ## Final Rule
 
 This system exists to serve with:
