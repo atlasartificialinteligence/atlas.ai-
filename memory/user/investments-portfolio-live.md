@@ -1,24 +1,24 @@
 # Investment Portfolio — Live (Atlas)
 
-_Last updated: 2026-03-21 21:42 UTC_
+_Last updated: 2026-03-25 12:53 UTC_
 _Status: validated_
 
 ## Portfolio Snapshot (current position)
 
 | Stock | Quantity | Current Price (R$) | Avg Cost (R$) | Market Value (R$) | Unrealized P/L (R$) | Unrealized P/L (%) | Portfolio Weight (%) |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| BBAS3 | 1,250 | 23.27 | 19.192952 | 29,087.50 | 5,096.31 | 21.24% | 79.11% |
-| BBSE3 | 53 | 34.09 | 19.03 | 1,806.77 | 798.18 | 79.14% | 4.91% |
-| EGIE3 | 35 | 31.31 | 26.396571 | 1,095.85 | 171.97 | 18.61% | 2.98% |
-| PETR4 | 69 | 45.67 | 32.838986 | 3,151.23 | 885.34 | 39.07% | 8.57% |
-| SAPR4 | 200 | 8.14 | 4.05 | 1,628.00 | 818.00 | 100.99% | 4.43% |
+| BBAS3 | 1,479 | 23.27 | 19.934151 | 34,416.33 | 4,933.72 | 16.73% | 81.75% |
+| BBSE3 | 53 | 34.09 | 19.03 | 1,806.77 | 798.18 | 79.14% | 4.29% |
+| EGIE3 | 35 | 31.31 | 26.396571 | 1,095.85 | 171.97 | 18.61% | 2.60% |
+| PETR4 | 69 | 45.67 | 32.838986 | 3,151.23 | 885.34 | 39.07% | 7.49% |
+| SAPR4 | 200 | 8.14 | 4.05 | 1,628.00 | 818.00 | 100.99% | 3.87% |
 
 ## Portfolio Totals
 
-- Total equity value (R$): **36,769.35**
-- Total cost basis (R$): **28,999.55**
-- Total unrealized result (R$): **7,769.80**
-- Total unrealized result (%): **26.79%**
+- Total equity value (R$): **42,098.18**
+- Total cost basis (R$): **34,490.97**
+- Total unrealized result (R$): **7,607.21**
+- Total unrealized result (%): **22.05%**
 
 ## Update Automation (active)
 
@@ -51,3 +51,4 @@ When Atlas receives a valid `ATLAS_EVENT`:
 - 2026-03-21 21:38 UTC — manual rollback of fictitious buy test: PETR4 -10 @ R$ 23.51; restored prior quantities, average cost, totals, and weights.
 - 2026-03-21 21:38 UTC — event `compra` applied: SAPR4 +100 @ R$ 8.14 (source: ios_shortcut; informed date: 21/03/2026). Recalculated quantity, average cost, totals, and weights.
 - 2026-03-21 21:42 UTC — manual rollback of fictitious buy test: SAPR4 -100 @ R$ 8.14; restored prior quantities, average cost, totals, and weights.
+- 2026-03-25 12:53 UTC — event `compra` applied: BBAS3 +229 @ R$ 23.98 (source: ios_shortcut; informed date: 23/03/2026). Recalculated quantity, average cost, totals, and weights.
